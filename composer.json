@@ -3,16 +3,16 @@
     "description": "Plugin for making json reports",
     "autoload": {
         "psr-4": {
-            "json_report\\": "./"
+            "json_report\\": "./src"
         },
         "files": [
-            "helpers/functions.php"
+            "src/helpers/functions.php"
         ]
     },
     "authors": [
         {
             "name": "Jhon Marreros Guzmán",
-            "email": "j_marreros@hotmail.com"
+            "email": "admin@decodecms.com"
         }
     ],
     "require": {}
