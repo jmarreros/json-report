@@ -1,0 +1,19 @@
+{
+    "name": "jmarreros/json-report",
+    "description": "Plugin for making json reports",
+    "autoload": {
+        "psr-4": {
+            "json_report\\": "./"
+        },
+        "files": [
+            "helpers/functions.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jhon Marreros Guzmán",
+            "email": "j_marreros@hotmail.com"
+        }
+    ],
+    "require": {}
+}

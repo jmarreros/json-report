@@ -2,7 +2,7 @@
 
 namespace json_report\includes;
 
-use json_report\includes\Database;
+//use json_report\includes\Database;
 
 class Plugin{
 

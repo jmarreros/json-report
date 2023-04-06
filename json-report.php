@@ -14,6 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
 namespace dcms\json_report;
 
+require __DIR__ . '/vendor/autoload.php';
+
 use json_report\includes\Plugin;
 use json_report\includes\Submenu;
 
@@ -33,12 +35,6 @@ final class Loader{
 		define ('JSON_REPORT_URL', plugin_dir_url( __FILE__ ));
 		define ('JSON_REPORT_BASE_NAME', plugin_basename( __FILE__ ));
 		define ('JSON_REPORT_SUBMENU', 'tools.php');
-	}
-
-	// Load all the files we need
-	public function load_includes(){
-		include_once ( JSON_REPORT_PATH . '/includes/plugin.php');
-		include_once ( JSON_REPORT_PATH . '/includes/submenu.php');
 	}
 
 	// Load tex domain
@@ -61,7 +57,6 @@ final class Loader{
 	// Initialize all
 	public function init(){
 		$this->define_constants();
-		$this->load_includes();
 		$this->load_domain();
 		$this->add_link_plugin();
 		new Plugin();
