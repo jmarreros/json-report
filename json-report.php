@@ -35,8 +35,8 @@ final class Loader {
 
 		// General constants
 		define( 'JSON_REPORT_VERSION', '1.0' );
-		define( 'JSON_REPORT_PATH', plugin_dir_path( __FILE__ ) . '/src/');
-		define( 'JSON_REPORT_URL', plugin_dir_url( __FILE__ ) );
+		define( 'JSON_REPORT_PATH', plugin_dir_path( __FILE__ ) . '/src/' );
+		define( 'JSON_REPORT_URL', plugin_dir_url( __FILE__ ) . '/src/' );
 		define( 'JSON_REPORT_BASE_NAME', plugin_basename( __FILE__ ) . '/src/' );
 		define( 'JSON_REPORT_SUBMENU', 'tools.php' );
 

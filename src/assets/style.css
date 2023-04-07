@@ -1,0 +1,74 @@
+.form-container label{
+    display: block;
+}
+
+.form-container textarea{
+    width: 100%;
+}
+
+.form-container label{
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 36px;
+}
+
+.form-container > div{
+    margin-top: 20px;
+    background-color:#eee;
+    padding: 20px;
+}
+
+
+.general-data{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.general-data > div:last-of-type {
+    grid-column: 1 / -1;
+}
+
+.numbers-data{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.geo-data{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-general{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-toggle{
+    text-align: right;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-toggle a{
+    text-decoration: none;
+}
+
+.form-container .geo-data label,
+.form-container .product-general label,
+#lblDescripcionInstalacion{
+    min-height: 0;
+}
+
+
+
+
