@@ -50,7 +50,8 @@
 
 .product-buttons,
 .recepciones-buttons,
-.complementos-buttons {
+.complementos-buttons,
+.cfdis-buttons{
     display: flex;
     justify-content: space-between;
 }
@@ -86,7 +87,8 @@
 }
 
 .recepciones-buttons,
-.complementos-buttons {
+.complementos-buttons,
+.cfdis-buttons{
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
@@ -120,4 +122,43 @@
     display: inline-block;
     width: 50%;
 }
+
+.cfdis{
+    margin-top:10px;
+    margin-left: 20px;
+}
+
+.recepcion{
+    margin-top:20px;
+    background-color:#ddd;
+    padding:20px;
+}
+
+.complemento{
+    background-color: #eee;
+    margin-bottom: 20px;
+    padding:20px;
+}
+
+.resultado-dictamen textarea{
+    margin-top: 10px;
+}
+
+.additional-container{
+    border: 1px dashed grey;
+    padding:20px;
+}
+
+.cfdi{
+    padding: 20px;
+    border:1px solid #bbb;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
 
