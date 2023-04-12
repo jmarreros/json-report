@@ -42,18 +42,19 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.product-general {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .product-buttons,
 .recepciones-buttons,
 .complementos-buttons,
-.cfdis-buttons{
+.cfdis-buttons,
+.condensados-buttons{
     display: flex;
     justify-content: space-between;
+}
+
+.product-buttons{
+    margin-top: 20px;
+    padding: 20px;
+    background-color:#eee;
 }
 
 .product-toggle {
@@ -73,19 +74,17 @@
 }
 
 .form-container .geo-data label,
-.form-container .product-general label,
+.condensados-container > label,
 #lblDescripcionInstalacion {
     min-height: 0;
 }
 
-.form-container .product-general label span {
-    display: block;
-}
 
 .report-month {
     margin-top: 25px;
 }
 
+.condensados-buttons,
 .recepciones-buttons,
 .complementos-buttons,
 .cfdis-buttons{
@@ -105,6 +104,7 @@
     margin-bottom: 10px;
 }
 
+.condensados-buttons,
 .recepciones-buttons {
     font-size: 16px;
 }
@@ -155,10 +155,34 @@
     margin-bottom: 20px;
 }
 
+.product-clave{
+    display: flex;
+}
 
 
+.condensados-container > label{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.condensados-container > label span{
+    margin-right: 20px;
+}
 
+.no-condensados span,
+.condensados span{
+    display: inline-block;
+    width: 50%;
+}
 
+.condensados-buttons{
+    margin-bottom: 0;
+}
 
+.condensado{
+    border-bottom: 1px solid #aaa;
+    margin:10px;
+    padding: 20px;
+}
 

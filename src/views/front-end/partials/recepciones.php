@@ -3,8 +3,8 @@
     <div class="recepciones-buttons">
         <div>Recepciones</div>
         <div>
-            <button id="add-reception">Agregar</button>
-            <button id="remove-reception">Quitar</button>
+            <button class="add-reception">Agregar</button>
+            <button class="remove-reception">Quitar</button>
         </div>
     </div>
 
@@ -44,8 +44,8 @@
             <div class="complementos-buttons">
                 <div>Complementos</div>
                 <div>
-                    <button id="add-complemento">Agregar</button>
-                    <button id="remove-complemento">Quitar</button>
+                    <button class="add-complemento">Agregar</button>
+                    <button class="remove-complemento">Quitar</button>
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
 
                     <label>
                         <span>Datos adicionales</span>
-                        <select class="additional-complement">
+                        <select class="sel-additional-complement">
                             <option value="Ninguno" selected>Ninguno</option>
                             <option value="Dictamen">Dictamen</option>
                             <option value="Nacional">Nacional</option>

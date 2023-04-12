@@ -3,8 +3,8 @@
 	<div class="cfdis-buttons">
 		<div>CDFIs</div>
 		<div>
-			<button id="add-cdfi">Agregar</button>
-			<button id="remove-cdfi">Quitar</button>
+			<button class="add-cdfi">Agregar</button>
+			<button class="remove-cdfi">Quitar</button>
 		</div>
 	</div>
 

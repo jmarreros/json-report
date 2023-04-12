@@ -69,18 +69,8 @@
         </div>
     </div>
 
-    <div class="product-buttons">
-        <div>Productos</div>
-        <div>
-            <button id="add-product">Agregar</button>
-            <button id="remove-product">Quitar</button>
-        </div>
-    </div>
 
-
-    <section class="products-container">
-        <?php include "partials/producto.php" ?>
-    </section>
+    <?php include "partials/productos.php" ?>
 
 
     <div>
