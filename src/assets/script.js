@@ -23,8 +23,8 @@
         sectionAddRemove(e.target, 'add-product', '.products-container', '.product-container');
         sectionAddRemove(e.target, 'remove-product', '.products-container', '.product-container');
 
-        sectionAddRemove(e.target, 'add-condensando', '.condensados', '.condensado');
-        sectionAddRemove(e.target, 'remove-condensando', '.condensados', '.condensado');
+        sectionAddRemove(e.target, 'add-condensado', '.condensados', '.condensado');
+        sectionAddRemove(e.target, 'remove-condensado', '.condensados', '.condensado');
 
         sectionAddRemove(e.target, 'add-reception', '.recepciones', '.recepcion');
         sectionAddRemove(e.target, '.remove-reception', '.recepciones', '.recepcion');
@@ -38,8 +38,14 @@
 
     function sectionAddRemove(target, classButton, parentContainer, sectionContainer) {
         if ($(target).hasClass(classButton)) {
-            if (classButton.includes('add')) {
+             if (classButton.includes('add')) {
                 $(target).closest(parentContainer).find(sectionContainer).last().clone().appendTo($(target).closest(parentContainer));
+
+                cleanClonElements($(target).closest(parentContainer).find(sectionContainer).last());
+                if (sectionContainer === '.product-container') {
+                    $(target).closest(parentContainer).find(sectionContainer).last().find('.product-code').text('');
+                }
+
             } else if (classButton.includes('remove')) {
                 if ($(target).closest(parentContainer).find(sectionContainer).length > 1) {
                     $(target).closest(parentContainer).find(sectionContainer).last().remove();
@@ -76,5 +82,11 @@
 
     });
 
+
+    function cleanClonElements(el) {
+        $(el).find('input').each(function () {
+            $(this).val('');
+        });
+    }
 
 })(jQuery);

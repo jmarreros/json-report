@@ -2,7 +2,7 @@
 	<div class="condensados-buttons">
 		<div>Condensados</div>
 		<div>
-			<button class="add-condensando">Agregar</button>
+			<button class="add-condensado">Agregar</button>
 			<button class="remove-condensado">Quitar</button>
 		</div>
 	</div>
