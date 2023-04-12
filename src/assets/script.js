@@ -4,7 +4,7 @@
     $('.show-product').hide();
     $('.dictamen').hide();
     $('.nacional').hide();
-    $('.si-condensados').hide();
+    $('.condensados').hide();
 
     $('.products-container').click(function (e) {
         e.preventDefault();
@@ -42,9 +42,6 @@
                 $(target).closest(parentContainer).find(sectionContainer).last().clone().appendTo($(target).closest(parentContainer));
 
                 cleanClonElements($(target).closest(parentContainer).find(sectionContainer).last());
-                if (sectionContainer === '.product-container') {
-                    $(target).closest(parentContainer).find(sectionContainer).last().find('.product-code').text('');
-                }
 
             } else if (classButton.includes('remove')) {
                 if ($(target).closest(parentContainer).find(sectionContainer).length > 1) {
@@ -84,9 +81,35 @@
 
 
     function cleanClonElements(el) {
-        $(el).find('input').each(function () {
+        $(el).find('input, textarea').each(function () {
             $(this).val('');
         });
+
+        if ($(el).hasClass('product-container')) {
+            $(el).find('.product-code').text('');
+            $(el).find('.condensados').hide();
+            $(el).find('.no-condensados').show();
+            $(el).find('.dictamen').hide();
+            $(el).find('.nacional').hide();
+
+            $(el).find('.condensado').not(':first').remove();
+            $(el).find('.recepcion').not(':first').remove();
+            $(el).find('.recepcion .complemento').not(':first').remove();
+            $(el).find('.recepcion .complemento .cfdi').not(':first').remove();
+        }
+
+        if ($(el).hasClass('recepcion')){
+            $(el).find('.complemento').not(':first').remove();
+            $(el).find('.complemento .cfdi').not(':first').remove();
+            $(el).find('.dictamen').hide();
+            $(el).find('.nacional').hide();
+        }
+
+        if ($(el).hasClass('complemento')){
+            $(el).find('.dictamen').hide();
+            $(el).find('.nacional').hide();
+            $(el).find('.cfdi').not(':first').remove();
+        }
     }
 
 })(jQuery);
