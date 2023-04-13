@@ -1,3 +1,7 @@
+.form-container{
+    min-width: 800px;
+}
+
 .form-container label {
     display: block;
 }
@@ -40,6 +44,11 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.recepciones{
+    background-color:#EEFFDC;
+    padding:20px;
 }
 
 .product-buttons,
@@ -159,6 +168,15 @@
     display: flex;
 }
 
+.product-clave{
+    display: flex;
+    justify-content: space-between
+}
+
+.product-clave span{
+    display: inline-block;
+    margin-right: 10px;
+}
 
 .condensados-container > label{
     display: flex;
@@ -185,4 +203,3 @@
     margin:10px;
     padding: 20px;
 }
-

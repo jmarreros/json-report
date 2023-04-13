@@ -26,7 +26,7 @@
             </label>
 
             <div class="sum-recepciones" data-name="SumaVolumenRecepcionMes">
-                <div class="item-description">Suma de Volumen de Recepciones del Mes</div>
+                <div class="item-description">➜ Suma de Volumen de Recepciones del Mes</div>
                 <label>
                     <span>Valor Numérico</span>
                     <input name="ValorNumerico" type="number" value="0">
@@ -37,6 +37,21 @@
                     <input name="UnidadDeMedida" type="text" value="">
                 </label>
             </div>
+
+            <div class="poder-calorifico" data-name="PoderCalorifico">
+                <div class="item-description">➜ Poder Calorífico</div>
+                <label>
+                    <span>Valor Numérico</span>
+                    <input name="ValorNumerico" type="number" value="0">
+                </label>
+
+                <label>
+                    <span>Unidad de Medida</span>
+                    <input name="UnidadDeMedida" type="text" value="">
+                </label>
+            </div>
+
+
         </div>
 
         <?php include "complementos.php" ?>
