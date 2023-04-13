@@ -27,7 +27,10 @@
         sectionAddRemove(e.target, 'remove-condensado', '.condensados', '.condensado');
 
         sectionAddRemove(e.target, 'add-reception', '.recepciones', '.recepcion');
-        sectionAddRemove(e.target, '.remove-reception', '.recepciones', '.recepcion');
+        sectionAddRemove(e.target, 'remove-reception', '.recepciones', '.recepcion');
+
+        sectionAddRemove(e.target, 'add-entrega', '.entregas', '.entrega');
+        sectionAddRemove(e.target, 'remove-entrega', '.entregas', '.entrega');
 
         sectionAddRemove(e.target, 'add-complemento', '.complementos', '.complemento');
         sectionAddRemove(e.target, 'remove-complemento', '.complementos', '.complemento');
@@ -93,12 +96,17 @@
             $(el).find('.nacional').hide();
 
             $(el).find('.condensado').not(':first').remove();
+
             $(el).find('.recepcion').not(':first').remove();
             $(el).find('.recepcion .complemento').not(':first').remove();
             $(el).find('.recepcion .complemento .cfdi').not(':first').remove();
+
+            $(el).find('.entrega').not(':first').remove();
+            $(el).find('.entrega .complemento').not(':first').remove();
+            $(el).find('.entrega .complemento .cfdi').not(':first').remove();
         }
 
-        if ($(el).hasClass('recepcion')){
+        if ($(el).hasClass('recepcion') || $(el).hasClass('entrega') ) {
             $(el).find('.complemento').not(':first').remove();
             $(el).find('.complemento .cfdi').not(':first').remove();
             $(el).find('.dictamen').hide();

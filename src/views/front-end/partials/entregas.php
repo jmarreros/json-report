@@ -26,7 +26,7 @@
 			</label>
 
 			<div class="sum-entregas" data-name="SumaVolumenEntregadoMes">
-				<div class="item-description">Suma de Volumen de Recepciones del Mes</div>
+				<div class="item-description">➜ Suma de Volumen de Recepciones del Mes</div>
 				<label>
 					<span>Valor Numérico</span>
 					<input name="ValorNumerico" type="number" value="0">

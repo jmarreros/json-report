@@ -23,6 +23,10 @@
     padding: 20px;
 }
 
+.form-container .product-container {
+    border: 2px solid #ccc;
+}
+
 
 .general-data {
     display: grid;
@@ -51,8 +55,15 @@
     padding:20px;
 }
 
+.entregas{
+    margin-top: 40px;
+    background-color:lightgoldenrodyellow;
+    padding:20px;
+}
+
 .product-buttons,
 .recepciones-buttons,
+.entregas-buttons,
 .complementos-buttons,
 .cfdis-buttons,
 .condensados-buttons{
@@ -96,12 +107,14 @@
 .condensados-buttons,
 .recepciones-buttons,
 .complementos-buttons,
+.entregas-buttons,
 .cfdis-buttons{
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
 
+.entregas-general span,
 .recepciones-general span {
     display: inline-block;
     width: 50%;
@@ -114,6 +127,7 @@
 }
 
 .condensados-buttons,
+.entregas-buttons,
 .recepciones-buttons {
     font-size: 16px;
 }
@@ -137,6 +151,7 @@
     margin-left: 20px;
 }
 
+.entrega,
 .recepcion{
     margin-top:20px;
     background-color:#ddd;

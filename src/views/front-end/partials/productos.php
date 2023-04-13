@@ -10,7 +10,7 @@
 
     <div class="product-container" data-name="Producto">
         <div class="product-header">
-            <div><span class="product-code"></span></div>
+            <div> ➜ <span class="product-code"></span></div>
             <div class="product-toggle">
                 <a class="show-product" href="#">🔽</a>
                 <a class="hide-product" href="#">🔼</a>
@@ -62,6 +62,7 @@
 
             <div class="report-month" data-name="ReporteDeVolumenMensual">
 				<?php include 'recepciones.php' ?>
+				<?php include 'entregas.php' ?>
             </div>
 
         </div>
