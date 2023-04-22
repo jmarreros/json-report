@@ -26,6 +26,7 @@ class Shortcode {
 				] );
 
 			ob_start();
+			include_once JSON_REPORT_PATH . 'views/front-end/general-data.php';
 			include_once JSON_REPORT_PATH . 'views/front-end/client-form.php';
 			$html_code = ob_get_contents();
 			ob_end_clean();

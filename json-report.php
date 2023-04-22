@@ -18,8 +18,10 @@ require __DIR__ . '/vendor/autoload.php';
 
 use json_report\includes\Enqueue;
 use json_report\includes\Plugin;
+use json_report\includes\Settings;
 use json_report\includes\Shortcode;
 use json_report\includes\Submenu;
+use json_report\includes\UserProfile;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -70,6 +72,8 @@ final class Loader {
 		new SubMenu();
 		new Enqueue();
 		new Shortcode();
+		new UserProfile();
+		new Settings();
 	}
 
 }

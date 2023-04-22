@@ -218,3 +218,9 @@
     margin:10px;
     padding: 20px;
 }
+
+.json-general-info strong{
+    font-weight: 600;
+    display: inline-block;
+    min-width: 280px;
+}
