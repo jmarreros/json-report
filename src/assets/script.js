@@ -4,7 +4,6 @@
     $('.show-product').hide();
     $('.dictamen').hide();
     $('.nacional').hide();
-    $('.condensados').hide();
 
     $('.products-container').click(function (e) {
         e.preventDefault();
@@ -72,14 +71,6 @@
             $(e.target).closest('.additional-container').find(containerClass).show();
         }
 
-        if ($(e.target).hasClass('sel-condensados')) {
-            $(e.target).closest('.condensados-container').find('.no-condensados').hide();
-            $(e.target).closest('.condensados-container').find('.condensados').hide();
-
-            const containerClass = "." + $(e.target).val();
-            $(e.target).closest('.condensados-container').find(containerClass).show();
-        }
-
     });
 
 
@@ -90,8 +81,7 @@
 
         if ($(el).hasClass('product-container')) {
             $(el).find('.product-code').text('');
-            $(el).find('.condensados').hide();
-            $(el).find('.no-condensados').show();
+
             $(el).find('.dictamen').hide();
             $(el).find('.nacional').hide();
 
@@ -121,3 +111,14 @@
     }
 
 })(jQuery);
+
+
+
+
+// if ($(e.target).hasClass('sel-condensados')) {
+//     $(e.target).closest('.condensados-container').find('.no-condensados').hide();
+//     $(e.target).closest('.condensados-container').find('.condensados').hide();
+//
+//     const containerClass = "." + $(e.target).val();
+//     $(e.target).closest('.condensados-container').find(containerClass).show();
+// }

@@ -35,14 +35,6 @@
 
                 <div class="condensados-container">
 
-                    <label>
-                        <span>Gas natural o condensados</span>
-                        <select class="sel-condensados">
-                            <option value="no-condensados" selected>No</option>
-                            <option value="condensados">Si</option>
-                        </select>
-                    </label>
-
                     <div class="no-condensados">
                         <label>
                             <span>Densidad del Producto</span>

@@ -179,18 +179,9 @@
     margin-bottom: 20px;
 }
 
-.product-clave{
-    display: flex;
-}
-
-.product-clave{
-    display: flex;
-    justify-content: space-between
-}
-
 .product-clave span{
+    width: 50%;
     display: inline-block;
-    margin-right: 10px;
 }
 
 .condensados-container > label{
@@ -201,6 +192,10 @@
 
 .condensados-container > label span{
     margin-right: 20px;
+}
+
+.no-condensados{
+    margin-bottom: 12px;
 }
 
 .no-condensados span,
