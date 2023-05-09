@@ -111,14 +111,3 @@
     }
 
 })(jQuery);
-
-
-
-
-// if ($(e.target).hasClass('sel-condensados')) {
-//     $(e.target).closest('.condensados-container').find('.no-condensados').hide();
-//     $(e.target).closest('.condensados-container').find('.condensados').hide();
-//
-//     const containerClass = "." + $(e.target).val();
-//     $(e.target).closest('.condensados-container').find(containerClass).show();
-// }

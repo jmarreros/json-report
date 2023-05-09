@@ -22,6 +22,7 @@ use json_report\includes\Settings;
 use json_report\includes\Shortcode;
 use json_report\includes\Submenu;
 use json_report\includes\UserProfile;
+use json_report\includes\Process;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -36,7 +37,7 @@ final class Loader {
 	public function define_constants() {
 
 		// General constants
-		define( 'JSON_REPORT_VERSION', '1.0' );
+		define( 'JSON_REPORT_VERSION', '1.1' );
 		define( 'JSON_REPORT_PATH', plugin_dir_path( __FILE__ ) . '/src/' );
 		define( 'JSON_REPORT_URL', plugin_dir_url( __FILE__ ) . '/src/' );
 		define( 'JSON_REPORT_BASE_NAME', plugin_basename( __FILE__ ) . '/src/' );
@@ -74,6 +75,7 @@ final class Loader {
 		new Shortcode();
 		new UserProfile();
 		new Settings();
+		new Process();
 	}
 
 }
