@@ -5,13 +5,12 @@
 
     function get_json_data() {
         // General Info
-        Object.assign(json, get_item_data('.json-general-info .json-data', true));
+        Object.assign(json, get_item_data('.json-general-info .json-data', true, true));
         Object.assign(json, get_item_data('.general-data .json-data'));
         // Numbers data
         Object.assign(json, get_item_data('.numbers-data .json-data'));
         // dates data
         Object.assign(json, get_item_data('.date-data .json-data'));
-
         // Geolocalizacion
         json.Geolocalizacion = [get_item_data('.geo-data .json-data')];
 
@@ -21,15 +20,80 @@
             let product = get_item_data($(this).find('.product-data .product-clave .json-data'));
             let no_condensados = {};
 
+            // No condensados
             if ($(this).find('.product-data .no-condensados .json-data')) {
-                no_condensados = get_item_data($(this).find('.product-data .no-condensados .json-data'), false, false);
+                no_condensados = get_item_data($(this).find('.product-data .no-condensados .json-data'), false);
             }
 
             Object.assign(product, no_condensados);
+
+            // Condensados
+            let condensados = [];
+            $(this).find('.product-data .condensados .condensado').each(function () {
+                const condensado = get_item_data($(this).find('.json-data'), false);
+                if (JSON.stringify(condensado) != '{}') {
+                    condensados.push(condensado);
+                }
+            });
+            if (condensados.length > 0) {
+                product.GasNaturalOCondensados = condensados;
+            }
+
+            product.ReporteDeVolumenMensual = {};
+
+            // Recepciones
+            const recepcionGeneralInfo = get_item_data($(this).find('.product-data .recepciones-general .recepciones-info .json-data'));
+            const recepcionSumRecepciones = get_item_data($(this).find('.product-data .recepciones-general .sum-recepciones .json-data'))
+            const recepcionPoderCalorifico = get_item_data($(this).find('.product-data .recepciones-general .poder-calorifico .json-data'));
+
+            product.ReporteDeVolumenMensual.Recepciones = recepcionGeneralInfo;
+            product.ReporteDeVolumenMensual.Recepciones.SumaVolumenRecepcionMes = recepcionSumRecepciones;
+            product.ReporteDeVolumenMensual.Recepciones.PoderCalorifico = recepcionPoderCalorifico;
+
+            // Complemento recepciones
+            let complementos = [];
+            $(this).find('.product-data .recepcion .complementos .complemento').each(function () {
+                let complemento = get_item_data($(this).find('.info-complemento .json-data'));
+
+                // Dictamen
+                if ($(this).find('.sel-additional-complement').val() === 'Dictamen') {
+                    complemento.Dictamen = get_item_data($(this).find('.dictamen .json-data'));
+                } else if ($(this).find('.sel-additional-complement').val() === 'Nacional') {
+                    complemento.Nacional = get_item_data($(this).find('.nacional .nacional-info .json-data'));
+
+                    let cfdis = [];
+
+                    $(this).find('.nacional .cfdis .cfdi').each(function () {
+                        let cfdi = get_item_data($(this).find('.cfdi-info .json-data'));
+                        cfdi.VolumenDocumentado = get_item_data($(this).find('.volumen-documentado .json-data'));
+                        cfdis.push(cfdi);
+                    });
+
+                    complemento.Nacional.CFDIs = cfdis;
+                }
+
+                complementos.push(complemento);
+            });
+            if (complementos.length > 0) {
+                product.ReporteDeVolumenMensual.Recepciones.Complemento = complementos;
+            }
+
+
+            // Entregas
+            const entregasGeneralInfo = get_item_data($(this).find('.product-data .entregas-general .entregas-info .json-data'));
+            const entregasSumRecepciones = get_item_data($(this).find('.product-data .entregas-general .sum-entregas .json-data'))
+            const entregasPoderCalorifico = get_item_data($(this).find('.product-data .entregas-general .poder-calorifico .json-data'));
+
+            product.ReporteDeVolumenMensual.Entregas = entregasGeneralInfo;
+            product.ReporteDeVolumenMensual.Entregas.SumaVolumenRecepcionMes = entregasSumRecepciones;
+            product.ReporteDeVolumenMensual.Entregas.PoderCalorifico = entregasPoderCalorifico;
+
+
             products.push(product);
         });
 
         json.Productos = products;
+
 
         // Impresión temporal
         const jsonStr = JSON.stringify(json, null, 3);
@@ -61,7 +125,7 @@
 
     });
 
-    function get_item_data(selector, text = false, empty_val = true) {
+    function get_item_data(selector, empty_val = true, text = false) {
         let value = {}
 
         $(selector).each(function () {
@@ -70,9 +134,7 @@
             } else {
                 if (!empty_val && $(this).val() != '') {
                     value[$(this).data('json')] = $(this).val();
-                }
-                else if(empty_val)
-                {
+                } else if (empty_val) {
                     value[$(this).data('json')] = $(this).val();
                 }
             }

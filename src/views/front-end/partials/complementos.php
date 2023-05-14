@@ -9,15 +9,19 @@
 	</div>
 
 	<div class="complemento">
-		<label>
-			<span>Tipo de Complemento</span>
-			<input name="TipoComplemento" type="text">
-		</label>
 
-		<label>
-			<span>Aclaración</span>
-			<input name="Aclaracion" type="text">
-		</label>
+		<div class="info-complemento">
+			<label>
+				<span>Tipo de Complemento</span>
+				<input class="json-data" data-json="TipoComplemento" type="text">
+			</label>
+
+			<label>
+				<span>Aclaración</span>
+				<input class="json-data" data-json="Aclaracion" type="text">
+			</label>
+		</div>
+
 
 		<div class="additional-container">
 
@@ -33,35 +37,38 @@
 			<div class="dictamen" >
 				<label>
 					<span>RFC Dictamen</span>
-					<input name="RfcDictamen" type="text">
+					<input class="json-data" data-json="RfcDictamen" type="text">
 				</label>
 
 				<label>
 					<span>Número de Folio del Dictamen</span>
-					<input name="NumeroFolioDictamen" type="text">
+					<input class="json-data" data-json="NumeroFolioDictamen" type="text">
 				</label>
 
 				<label>
 					<span>Fecha de Emisión del Dictamen</span>
-					<input name="FechaEmisionDictamen" type="date">
+					<input class="json-data" data-json="FechaEmisionDictamen" type="date">
 				</label>
 
 				<label class="resultado-dictamen">
 					<span>Resultado del Dictamen</span>
-					<textarea name="ResultadoDictamen"></textarea>
+					<textarea class="json-data" data-json="ResultadoDictamen"></textarea>
 				</label>
 			</div>
 
 			<div class="nacional">
-				<label>
-					<span>RFC del Cliente</span>
-					<input name="RfcCliente" type="text">
-				</label>
 
-				<label>
-					<span>Nombre del Cliente</span>
-					<input name="NombreCliente" type="text">
-				</label>
+				<div class="nacional-info">
+					<label>
+						<span>RFC del Cliente</span>
+						<input class="json-data" data-json="RfcCliente" type="text">
+					</label>
+
+					<label>
+						<span>Nombre del Cliente</span>
+						<input class="json-data" data-json="NombreCliente" type="text">
+					</label>
+				</div>
 
 				<?php include "cfdis.php" ?>
 

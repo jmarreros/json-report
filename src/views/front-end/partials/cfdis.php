@@ -9,38 +9,42 @@
 	</div>
 
 	<div class="cfdi">
-		<label>
-			<span>CFDI</span>
-			<input name="Cfdi" type="text">
-		</label>
 
-		<label>
-			<span>Tipo de CFDI</span>
-			<input name="TipoCfdi" type="text">
-		</label>
+		<div class="cfdi-info">
+			<label>
+				<span>CFDI</span>
+				<input class="json-data" data-json="Cfdi" type="text">
+			</label>
 
-		<label>
-			<span>Precio de Venta</span>
-			<input name="PrecioVenta" type="number">
-		</label>
+			<label>
+				<span>Tipo de CFDI</span>
+				<input class="json-data" data-json="TipoCfdi" type="text">
+			</label>
 
-		<label>
-			<span>Fecha y Hora de la Transacción</span>
-			<input name="FechaYHoraTransaccion" type="datetime-local">
-		</label>
+			<label>
+				<span>Precio de Venta</span>
+				<input class="json-data" data-json="PrecioVenta" type="number">
+			</label>
 
-		<div class="volumen-documentado" data-name="VolumenDocumentado">
+			<label>
+				<span>Fecha y Hora de la Transacción</span>
+				<input class="json-data" data-json="FechaYHoraTransaccion" type="datetime-local">
+			</label>
+		</div>
+
+		<div class="volumen-documentado" name="VolumenDocumentado">
 			<div class="item-description">Volumen Documentado</div>
 			<label>
 				<span>Valor Numérico</span>
-				<input name="ValorNumerico" type="number" value="0">
+				<input class="json-data" data-json="ValorNumerico" type="number" value="0">
 			</label>
 
 			<label>
 				<span>Unidad de Medida</span>
-				<input name="UnidadDeMedida" type="text" value="">
+				<input class="json-data" data-json="UnidadDeMedida" type="text" value="">
 			</label>
 		</div>
+
 	</div>
 
 </div>
