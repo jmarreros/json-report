@@ -24,12 +24,12 @@
                 <div class="product-clave">
                     <label>
                         <span>Clave del Producto</span>
-                        <input name="ClaveProducto" type="text">
+                        <input class="json-data" data-json="ClaveProducto" type="text">
                     </label>
 
                     <label>
                         <span>Clave de Sub Producto</span>
-                        <input name="ClaveSubProducto" type="text">
+                        <input class="json-data" data-json="ClaveSubProducto" type="text">
                     </label>
                 </div>
 
@@ -38,11 +38,11 @@
                     <div class="no-condensados">
                         <label>
                             <span>Densidad del Producto</span>
-                            <input name="DensidadDePetroleo" type="text">
+                            <input class="json-data" data-json="DensidadDePetroleo" type="text">
                         </label>
                         <label>
                             <span>Composición de Azufre en el Petroleo (%)</span>
-                            <input name="ComposDeAzufreEnPetroleo" type="text">
+                            <input class="json-data" data-json="ComposDeAzufreEnPetroleo" type="text">
                         </label>
                     </div>
 

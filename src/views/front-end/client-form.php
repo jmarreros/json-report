@@ -78,3 +78,9 @@
     </div>
 
 </form>
+
+<div class="code-container">
+    <h4>Impresión temporal del código JSON</h4>
+    <pre id="print-json">
+    </pre>
+</div>

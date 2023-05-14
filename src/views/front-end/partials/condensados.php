@@ -10,17 +10,17 @@
 	<div class="condensado">
 		<label>
 			<span>Composición Gas</span>
-			<input name="ComposGasNaturalOCondensados" type="text">
+			<input class="json-data" data-json="ComposGasNaturalOCondensados" type="text">
 		</label>
 
 		<label>
 			<span>Fracción Molar</span>
-			<input name="FraccionMolar" type="text">
+			<input class="json-data" data-json="FraccionMolar" type="text">
 		</label>
 
 		<label>
 			<span>Poder Calorífico</span>
-			<input name="PoderCalorifico" type="number">
+			<input class="json-data" data-json="PoderCalorifico" type="number">
 		</label>
 	</div>
 </div>

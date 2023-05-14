@@ -53,14 +53,12 @@
         }
     }
 
-
     $('.products-container').keyup(function (e) {
-        if ($(e.target).attr('name') === 'ClaveProducto') {
+        if ($(e.target).data('json') === 'ClaveProducto') {
             const text = $(e.target).val();
             $(e.target).closest('.product-container').find('.product-code').text(text);
         }
     });
-
 
     $('.products-container').change(function (e) {
         if ($(e.target).hasClass('sel-additional-complement')) {

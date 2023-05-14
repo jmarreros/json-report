@@ -219,3 +219,15 @@
     display: inline-block;
     min-width: 280px;
 }
+
+pre {
+    background-color: ghostwhite;
+    border: 1px solid silver;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 14px;
+}
+
+.code-container{
+    max-width:100%!important;
+}
