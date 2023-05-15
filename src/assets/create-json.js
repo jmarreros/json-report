@@ -53,25 +53,7 @@
             // Complemento recepciones
             let complementos = [];
             $(this).find('.product-data .recepcion .complementos .complemento').each(function () {
-                let complemento = get_item_data($(this).find('.info-complemento .json-data'));
-
-                // Dictamen
-                if ($(this).find('.sel-additional-complement').val() === 'Dictamen') {
-                    complemento.Dictamen = get_item_data($(this).find('.dictamen .json-data'));
-                } else if ($(this).find('.sel-additional-complement').val() === 'Nacional') {
-                    complemento.Nacional = get_item_data($(this).find('.nacional .nacional-info .json-data'));
-
-                    let cfdis = [];
-
-                    $(this).find('.nacional .cfdis .cfdi').each(function () {
-                        let cfdi = get_item_data($(this).find('.cfdi-info .json-data'));
-                        cfdi.VolumenDocumentado = get_item_data($(this).find('.volumen-documentado .json-data'));
-                        cfdis.push(cfdi);
-                    });
-
-                    complemento.Nacional.CFDIs = cfdis;
-                }
-
+                let complemento = build_complemento(this);
                 complementos.push(complemento);
             });
             if (complementos.length > 0) {
@@ -88,6 +70,15 @@
             product.ReporteDeVolumenMensual.Entregas.SumaVolumenRecepcionMes = entregasSumRecepciones;
             product.ReporteDeVolumenMensual.Entregas.PoderCalorifico = entregasPoderCalorifico;
 
+            // Complemento entregas
+            complementos = [];
+            $(this).find('.product-data .entregas .complementos .complemento').each(function () {
+                let complemento = build_complemento(this);
+                complementos.push(complemento);
+            });
+            if (complementos.length > 0) {
+                product.ReporteDeVolumenMensual.Entregas.Complemento = complementos;
+            }
 
             products.push(product);
         });
@@ -140,6 +131,29 @@
             }
         });
         return value;
+    }
+
+    function build_complemento(selector){
+        let complemento = get_item_data($(selector).find('.info-complemento .json-data'));
+
+        // Dictamen
+        if ($(selector).find('.sel-additional-complement').val() === 'Dictamen') {
+            complemento.Dictamen = get_item_data($(selector).find('.dictamen .json-data'));
+        } else if ($(selector).find('.sel-additional-complement').val() === 'Nacional') {
+            complemento.Nacional = get_item_data($(selector).find('.nacional .nacional-info .json-data'));
+
+            let cfdis = [];
+
+            $(selector).find('.nacional .cfdis .cfdi').each(function () {
+                let cfdi = get_item_data($(selector).find('.cfdi-info .json-data'));
+                cfdi.VolumenDocumentado = get_item_data($(selector).find('.volumen-documentado .json-data'));
+                cfdis.push(cfdi);
+            });
+
+            complemento.Nacional.CFDIs = cfdis;
+        }
+
+        return complemento;
     }
 
     function export_file() {
