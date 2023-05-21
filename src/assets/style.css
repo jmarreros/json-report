@@ -2,18 +2,14 @@
     min-width: 800px;
 }
 
-.form-container label {
-    display: block;
-}
-
 .form-container textarea {
     width: 100%;
 }
 
 .form-container label {
+    display: block;
     font-size: 14px;
-    line-height: 18px;
-    min-height: 36px;
+    margin-bottom: 6px;
 }
 
 .form-container > div,
@@ -21,7 +17,10 @@
     margin-top: 20px;
     background-color: #eee;
     padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
+
 
 .form-container .product-container {
     border: 2px solid #ccc;
@@ -52,11 +51,13 @@
 
 .recepciones{
     background-color:#EEFFDC;
+    border-radius: 10px;
     padding:20px;
 }
 
 .entregas{
     margin-top: 40px;
+    border-radius: 10px;
     background-color:lightgoldenrodyellow;
     padding:20px;
 }
@@ -74,7 +75,6 @@
 .product-buttons{
     margin-top: 20px;
     padding: 20px;
-    background-color:#eee;
 }
 
 .product-toggle {
@@ -118,6 +118,13 @@
 .recepciones-general span {
     display: inline-block;
     width: 50%;
+}
+
+.entrega,
+.recepcion,
+.complemento,
+.cfdi {
+    border-radius: 10px;
 }
 
 .item-description {
@@ -169,7 +176,7 @@
 }
 
 .additional-container{
-    border: 1px dashed grey;
+    border-radius: 10px;
     padding:20px;
 }
 
@@ -230,4 +237,52 @@ pre {
 
 .code-container{
     max-width:100%!important;
+}
+
+.form-container .json-data{
+    padding: 10px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-container textarea.json-data{
+    max-width: 95%
+}
+
+.form-container .footer{
+    background-color: transparent;
+    border:none;
+}
+
+.form-container button,
+.form-container input[type=button]{
+    background-color:darkorange;
+    border:none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color:white;
+}
+
+.form-container button:hover,
+.form-container input[type=button]:hover{
+    background-color:#c16d0e;
+    cursor: pointer;
+}
+
+.form-container .product-buttons button{
+    padding: 6px 15px;
+}
+
+.form-container .product-container button{
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color:black;
+}
+
+.form-container .product-container button:hover{
+    background-color: #333;
+}
+
+.form-container select{
+    padding: 8px 20px;
 }

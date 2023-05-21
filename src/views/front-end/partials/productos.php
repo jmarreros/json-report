@@ -12,8 +12,12 @@
         <div class="product-header">
             <div> ➜ <span class="product-code"></span></div>
             <div class="product-toggle">
-                <a class="show-product" href="#">🔽</a>
-                <a class="hide-product" href="#">🔼</a>
+                <a class="show-product" href="#">
+                    <img src="<?= JSON_REPORT_URL . 'assets/images/arrow-down.svg'; ?>" width="20" height="20">
+                </a>
+                <a class="hide-product" href="#">
+                    <img src="<?= JSON_REPORT_URL . 'assets/images/arrow-up.svg'; ?>" width="20" height="20">
+                </a>
             </div>
         </div>
 

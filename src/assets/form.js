@@ -1,20 +1,26 @@
 (function ($) {
     'use strict';
 
+    const date = new Date();
+    const currentDate = date.toISOString().split('T')[0] + " " + date.getHours() + ":" + date.getMinutes();
+    $('#FechaYHoraReporteMes').val(currentDate);
+
+
     $('.show-product').hide();
     $('.dictamen').hide();
     $('.nacional').hide();
 
+
     $('.products-container').click(function (e) {
         e.preventDefault();
 
-        if ($(e.target).hasClass('show-product') || $(e.target).hasClass('hide-product')) {
-            $(e.target).hide();
-            if ($(e.target).hasClass('show-product')) {
-                $(e.target).parent().find('.hide-product').show();
+        if ($(e.target).parent().hasClass('show-product') || $(e.target).parent().hasClass('hide-product')) {
+            $(e.target).parent().hide();
+            if ($(e.target).parent().hasClass('show-product')) {
+                $(e.target).parent().parent().find('.hide-product').show();
                 $(e.target).closest('.product-container').find('.product-data').show();
             } else {
-                $(e.target).parent().find('.show-product').show();
+                $(e.target).parent().parent().find('.show-product').show();
                 $(e.target).closest('.product-container').find('.product-data').hide();
             }
         }
