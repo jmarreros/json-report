@@ -85,17 +85,15 @@
 
         json.Productos = products;
 
-
-        // Impresión temporal
-        const jsonStr = JSON.stringify(json, null, 3);
-        $('#print-json').text(jsonStr);
     }
 
     $("#btn-save-json").click(function (e) {
         e.preventDefault();
         get_json_data();
 
-        // export_file();
+        temporal_report_screen();
+
+        export_file();
 
         // $.ajax({
         //     url : json_report.ajaxurl,
@@ -158,7 +156,7 @@
 
     function export_file() {
         const filename = 'data.json';
-        const jsonStr = JSON.stringify(json);
+        const jsonStr = JSON.stringify(json, null, 3); //JSON.stringify(json);
 
         let element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(jsonStr));
@@ -168,6 +166,12 @@
         document.body.appendChild(element);
         element.click();
         document.body.removeChild(element);
+    }
+
+    function temporal_report_screen(){
+        // Impresión temporal
+        const jsonStr = JSON.stringify(json, null, 3);
+        $('#print-json').text(jsonStr);
     }
 
 })(jQuery);

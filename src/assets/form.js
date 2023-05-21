@@ -2,14 +2,14 @@
     'use strict';
 
     const date = new Date();
-    const currentDate = date.toISOString().split('T')[0] + " " + date.getHours() + ":" + date.getMinutes();
-    $('#FechaYHoraReporteMes').val(currentDate);
+    const currentDate = date.toISOString().split('T')[0];
+    const currentHour = date.getHours().toString().padStart(2, '0') + ":" + date.getMinutes().toString().padStart(2, '0');
 
+    $('#FechaYHoraReporteMes').val(currentDate + " " + currentHour);
 
     $('.show-product').hide();
     $('.dictamen').hide();
     $('.nacional').hide();
-
 
     $('.products-container').click(function (e) {
         e.preventDefault();
