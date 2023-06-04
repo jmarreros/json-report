@@ -67,7 +67,8 @@
 .entregas-buttons,
 .complementos-buttons,
 .cfdis-buttons,
-.condensados-buttons{
+.condensados-buttons,
+.bitacoras-buttons{
     display: flex;
     justify-content: space-between;
 }
@@ -108,7 +109,8 @@
 .recepciones-buttons,
 .complementos-buttons,
 .entregas-buttons,
-.cfdis-buttons{
+.cfdis-buttons,
+.bitacoras-buttons{
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
@@ -186,6 +188,8 @@
     margin-bottom: 20px;
 }
 
+
+.bitacora-general span,
 .product-clave span{
     width: 50%;
     display: inline-block;
@@ -269,6 +273,7 @@ pre {
     cursor: pointer;
 }
 
+.form-container .bitacoras-buttons button,
 .form-container .product-buttons button{
     padding: 6px 15px;
 }
@@ -285,4 +290,20 @@ pre {
 
 .form-container select{
     padding: 8px 20px;
+}
+
+.bitacora-general textarea{
+    margin-top: 6px;
+}
+
+.bitacoras .bitacora {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #bbb;
+    margin-top: 30px;
+}
+
+.bitacoras .bitacora:last-child{
+    border-bottom: 0;
+    margin-bottom: 0;
 }

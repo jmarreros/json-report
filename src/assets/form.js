@@ -11,6 +11,7 @@
     $('.dictamen').hide();
     $('.nacional').hide();
 
+    // Products
     $('.products-container').click(function (e) {
         e.preventDefault();
 
@@ -43,6 +44,14 @@
         sectionAddRemove(e.target, 'add-cdfi', '.cfdis', '.cfdi');
         sectionAddRemove(e.target, 'remove-cdfi', '.cfdis', '.cfdi');
     });
+
+    // Bitacoras
+    $('.bitacoras').click(function (e) {
+        e.preventDefault();
+        sectionAddRemove(e.target, 'add-bitacora', '.bitacoras', '.bitacora');
+        sectionAddRemove(e.target, 'remove-bitacora', '.bitacoras', '.bitacora');
+    });
+
 
     function sectionAddRemove(target, classButton, parentContainer, sectionContainer) {
         if ($(target).hasClass(classButton)) {

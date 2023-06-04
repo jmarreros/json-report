@@ -1,7 +1,7 @@
 <div class="bitacoras" name="Bitacoras">
 
     <div class="bitacoras-buttons">
-        <div>Entregas</div>
+        <div>Bitácora mensual</div>
         <div>
             <button class="add-bitacora">Agregar</button>
             <button class="remove-bitacora">Quitar</button>
@@ -32,7 +32,7 @@
 
                 <label>
                     <span>Descripcion del evento</span>
-                    <input class="json-data" data-json="DescripcionEvento" type="text" value="">
+                    <textarea class="json-data" data-json="DescripcionEvento"></textarea>
                 </label>
 
                 <label>

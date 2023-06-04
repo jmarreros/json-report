@@ -73,6 +73,8 @@
 
 	<?php include "partials/productos.php" ?>
 
+    <?php include "partials/bitacoras.php" ?>
+
     <div class="footer">
         <input id="btn-save-json" type="button" value="Generar archivo">
     </div>
