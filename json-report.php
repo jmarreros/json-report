@@ -3,7 +3,7 @@
 Plugin Name: Json Report
 Plugin URI: https://decodecms.com
 Description: Generate a json report from a form
-Version: 1.0
+Version: 1.2.1
 Author: Jhon Marreros Guzmán
 Author URI: https://decodecms.com
 Text Domain: json-report
@@ -37,7 +37,7 @@ final class Loader {
 	public function define_constants() {
 
 		// General constants
-		define( 'JSON_REPORT_VERSION', '1.2' );
+		define( 'JSON_REPORT_VERSION', '1.2.1' );
 		define( 'JSON_REPORT_PATH', plugin_dir_path( __FILE__ ) . '/src/' );
 		define( 'JSON_REPORT_URL', plugin_dir_url( __FILE__ ) . 'src/' );
 		define( 'JSON_REPORT_BASE_NAME', plugin_basename( __FILE__ ) . '/src/' );
