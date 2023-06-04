@@ -47,9 +47,12 @@
 
     // Bitacoras
     $('.bitacoras').click(function (e) {
-        e.preventDefault();
-        sectionAddRemove(e.target, 'add-bitacora', '.bitacoras', '.bitacora');
-        sectionAddRemove(e.target, 'remove-bitacora', '.bitacoras', '.bitacora');
+        //only buttons
+        if ( e.target.type === 'submit'){
+            e.preventDefault();
+            sectionAddRemove(e.target, 'add-bitacora', '.bitacoras', '.bitacora');
+            sectionAddRemove(e.target, 'remove-bitacora', '.bitacoras', '.bitacora');
+        }
     });
 
 

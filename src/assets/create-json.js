@@ -4,8 +4,9 @@
     let json = {};
 
     function get_json_data() {
-        // General Info
+        // General Info, textos en span desde BD (Text true)
         Object.assign(json, get_item_data('.json-general-info .json-data', true, true));
+        // General Info, textos en input
         Object.assign(json, get_item_data('.general-data .json-data'));
         // Numbers data
         Object.assign(json, get_item_data('.numbers-data .json-data'));
@@ -60,7 +61,6 @@
                 product.ReporteDeVolumenMensual.Recepciones.Complemento = complementos;
             }
 
-
             // Entregas
             const entregasGeneralInfo = get_item_data($(this).find('.product-data .entregas-general .entregas-info .json-data'));
             const entregasSumRecepciones = get_item_data($(this).find('.product-data .entregas-general .sum-entregas .json-data'))
@@ -84,6 +84,16 @@
         });
 
         json.Productos = products;
+
+
+        // Bitacora mensual
+        let bitacoras = [];
+        $('.bitacoras .bitacora').each(function (){
+            const bitacora = get_item_data($(this).find('.json-data') );
+            bitacoras.push(bitacora);
+        });
+
+        json.BitacoraMensual = bitacoras;
 
     }
 
